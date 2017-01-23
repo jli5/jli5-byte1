@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Byte 1 Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+   <script src="../js/jquery-3.1.1.min.js" type="text/javascript"></script>
+   <script src="../js/bootstrap.min.js" type="text/javascript"></script>
 </head>
-<body>
-<h1>Data Pipeline Project Byte Example</h1>
+<body>  
+ <div class="container">
 
-<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2+from+1RZRvnndlgR4SC2O4ePHmc7XZObu3B-Jy2xlvvdok&amp;viz=MAP&amp;h=false&amp;lat=32.19989480651925&amp;lng=-94.63340875&amp;t=1&amp;z=3&amp;l=col2&amp;y=2&amp;tmplt=2&amp;hml=TWO_COL_LAT_LNG"></iframe>
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Hotel Indicator</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <!---<li><a href="#">About</a></li>-->
+             
+            </ul>
+          
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+
+   
+      <div class="jumbotron" style="background:#4DDAF7">
+        <h1>2016 USnews best hotels</h1>
+        <p>Which states are the best hotels located in? </p>
+        <p>What are the top3 states with most 2016 USnews Best Hotels? </p>
+       
+      </div>
+      
+      <!---nav tab-->
+      <div class="row">
+        <div class="tabbable" id="tabs-56899">
+                        <ul class="nav nav-tabs">
+                            <li class="#panel-1 active">
+                                <a href="#panel-1" data-toggle="tab">Find in map</a>
+                            </li>
+                            <li class="#panel-2">
+                                <a href="#panel-2" data-toggle="tab">Find in Chart</a>
+                            </li>
+                             <li class="#panel-3">
+                                <a href="#panel-3" data-toggle="tab">Hotel Cards</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+						  <div class="tab-pane active" id="panel-1"><br/>
+						  <h4>2016 Best hotels distribution by state</h4>
+						  <p>Which states are the best hotels located in? </p>
+       
+						  <iframe width="800" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col2%3E%3E0+from+1Tj8UcTqTR9BkWzRjV4fqONOu-ZGO_ycRKM3QaNIp&amp;viz=MAP&amp;h=false&amp;lat=37.28814082292956&amp;lng=-109.838486875&amp;t=1&amp;z=4&amp;l=col2%3E%3E0&amp;y=2&amp;tmplt=2&amp;hml=TWO_COL_LAT_LNG"></iframe>
+						  </div>
+                            <div class="tab-pane" id="panel-2"><br/>
+ 								<h4>2016 Best hotels chartby state</h4> 
+ 								 <p>What are the top3 states with most 2016 USnews Best Hotels? </p>
+ 								<iframe width="800" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+count()+from+1RZRvnndlgR4SC2O4ePHmc7XZObu3B-Jy2xlvvdok+group+by+col6+order+by+count()+asc+limit+20&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_is3D=false&amp;gco_pieHole=0&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;att=true&amp;width=800&amp;height=385"></iframe>
+ 								
+      						</div>
+      						<div class="tab-pane" id="panel-3"><br/>
+ 								 <h4>2016 Best hotels cards</h4>
+ 								  <p>Contact one and start your wonderful journey!</p>
+ 								 <iframe width="800" height="400" scrolling="yes" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=CARD&amp;q=select+*+from+1RZRvnndlgR4SC2O4ePHmc7XZObu3B-Jy2xlvvdok+order+by+col0+asc&amp;tmplt=3&amp;cpr=2"></iframe>
+      						</div>
+      						
+      						
+      						
+      
+ 				
+				<div class="col-md-9" style="background:">
+				
+					
+				</div>
+			</div>
+      
+      
+
+    </div> <!-- /container -->
+
+
+
+
+
 </body>
 </html>
